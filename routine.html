@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav{
+            display: flex;
+            background-color: cornflowerblue;
+        }
+
+        li{
+            padding: 0 23px;
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+
+ <!-- This is DOM Manipulations practice file -->
+    
+    <!-- practice no 1  -->
+    
+    <nav>
+        <li>Home </li>
+        <li>About</li>
+        <li>Gallery</li>
+        <li>Contact</li>
+    </nav>
+
+    
+    <!-- practice no 2  -->
+    
+    <table>
+        <tr>Sulaiman</tr>
+        <tr>Hussain</tr>
+        <tr>12th</tr>
+        <tr>CloudComputing</tr>
+        <tr>Passed</tr>
+    </table>
+<!--     
+    output : view source on web page . its not show the tbody 
+            but the browser developer tool show the tbody in table its called auto-correction -->
+    
+
+    <!-- practice no 3  -->
+
+    <ul>
+        <li>Going to University</li>
+        <li>Then Do Some Coding</li>
+        <li>Going to take Meta Class</li>
+    </ul>
+
+
+    <script>
+
+      let sty =  document.body.firstElementChild.firstElementChild;
+      sty.style.color = "red"
+
+      document.getElementsByTagName("ul")[0].firstElementChild.style.color = "white";
+      document.getElementsByTagName("ul")[0].lastElementChild.style.color = "white";
+
+    //   document.getElementsByTagName("li").style.backgroundColor = "cyan"   
+
+    Array.from(document.getElementsByTagName("li")).forEach( element => {
+        element.style.background = "cyan";
+    })
+    </script>
+    
+</body>
+</html>
